@@ -17,7 +17,7 @@ contract KatzeInterface {
 contract TrollFeeding is TrollFactory {
 
   address ckAddress = 0x06012c8cf97BEaD5deAe237070F9587f8E7A266d;
-  KatzeInterface kittyContract = KatzeInterface(ckAddress);
+  KatzeInterface katzeContract = KatzeInterface(ckAddress);
 
   function feedAndMultiply(uint _trollId, uint _targetDna, string _species) public {
     require(msg.sender == trollToOwner[_trollId]);
